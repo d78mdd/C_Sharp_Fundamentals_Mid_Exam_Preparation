@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Problem_1___Computer_Store
 {
@@ -19,7 +15,7 @@ namespace Problem_1___Computer_Store
 
             string customerType;
 
-            for ( ; ; )
+            for (; ; )
             {
                 string input = Console.ReadLine();
 
@@ -39,12 +35,11 @@ namespace Problem_1___Computer_Store
                 double priceTax = 0.20 * price;
                 double priceTaxed = price + priceTax;
 
-                total += price; 
+                total += price;
                 totalWithTaxes += priceTaxed;
                 totalTaxes += priceTax;
             }
 
- 
             if (customerType.Equals("special"))
             {
                 double priceTaxedDiscount = totalWithTaxes * discount;
@@ -53,14 +48,12 @@ namespace Problem_1___Computer_Store
                 totalWithTaxes = priceTaxedDiscounted;
             }
 
-
             if (totalWithTaxes == 0)
             {
                 Console.WriteLine("Invalid order!");
             }
             else
             {
-
                 Console.WriteLine("Congratulations you've just bought a new computer!");
                 Console.WriteLine($"Price without taxes: {total:F2}$");
                 Console.WriteLine($"Taxes: {totalTaxes:F2}$");
