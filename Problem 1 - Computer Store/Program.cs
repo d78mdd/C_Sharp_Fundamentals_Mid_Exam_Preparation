@@ -10,6 +10,7 @@ namespace Problem_1___Computer_Store
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
